@@ -1,0 +1,222 @@
+body, html {
+	background:#212531;
+	background: linear-gradient(to left bottom, #F0EFEE 30%, #212531 70%);
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-family: Montseratt,Roboto Slab, Open Sans;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+/* Center website */
+.main {
+	max-width: 1000px;
+	margin: auto;
+}
+
+h1 {
+	color: white;
+	font-size: 50px;
+	word-break: break-all;
+	text-shadow:2px 2px 4px #000000;
+}
+
+h2{
+	color: white;
+	text-shadow:2px 2px 4px #000000;
+}
+
+.text{
+	color: white;
+	text-shadow:2px 2px 4px #000000;
+}
+.row {
+	margin: 8px -16px;
+}
+
+/* Add padding BETWEEN each column (if you want) */
+.row,
+.row > .column {
+	padding: 8px;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+	float: left;
+	width: 25%;
+}
+
+/* Clear floats after rows */
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/* Content */
+.content {
+	background-color: #746D69;
+	color:#F0EFEE;
+	padding: 10px;
+	box-shadow: 2px 2px 4px #000000;
+	text-shadow:2px 2px 4px #000000;
+	position:relative;
+}
+
+.content:hover{
+	animation-name: box-effect;
+	animation-duration:3s;
+	box-shadow: #7baed3 0 4px 7.5px;
+	animation-timing-function: ease-out;
+	animation-delay:0.5s;
+}
+
+/* animation for the content box*/
+@keyframes box-effect{
+	from{
+		background-color:#746D69;
+		color:#F0EFEE;
+		box-shadow: #7baed3 0 4px 7.5px;
+	}
+	to{
+		background-color:#3f3f3f;
+		color:#eeeeee;
+		box-shadow: #000000 0 4px 7.5px;
+	}
+}
+
+.content img{
+	width:100%;
+	max-height: 150px;
+	transition:transform 1s;
+	border-radius:5px;
+}
+.content img:hover{
+	transform: translateY(5px);
+	cursor: pointer;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+	margin: auto;
+	display: block;
+	width: 50%;
+	max-width: 700px;
+}
+
+#img01{
+	width: 275px;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+	margin: auto;
+	display: block;
+	width: 80%;
+	max-width: 700px;
+	text-align: center;
+	color: #ccc;
+	padding: 10px 0;
+	height: 150px;
+}
+
+.modal-text{
+	text-align: center;
+	font-size: 16px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption, .modal-text {
+	animation-name: zoom;
+	animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+	from {transform:scale(0)}
+	to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+	position: absolute;
+	top: 15px;
+	right: 35px;
+	color: #f1f1f1;
+	font-size: 40px;
+	font-weight: bold;
+	transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+	color: #bbb;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+	.modal-content {
+		width: 100%;
+  }
+}
+
+.column a{
+	text-decoration: none;
+	color:#F0EFEE;
+}
+
+span {
+	font-size: 15px;
+}
+
+.arrow{
+	content: "\27F9";
+}
+
+.arrow:hover{
+	color:#f0c11b;
+	font-style:bold;
+	cursor:pointer;
+}
+
+.face {
+  content: "\2639";
+}
+
+.face:hover{
+	color:#f0c11b;
+	font-style:bold;
+	cursor:not-allowed;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+	.column {
+    width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+	.column {
+    width: 100%;
+  }
+}
